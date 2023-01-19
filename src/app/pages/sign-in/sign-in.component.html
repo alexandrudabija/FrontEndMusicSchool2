@@ -1,0 +1,13 @@
+
+
+<form [formGroup]="UserForm" >
+<label for="">Email address</label>
+
+<input formControlName="email" type="email">
+
+<label for="">Password</label>
+<input  formControlName="password" type="password">
+
+
+<button mat-raised-button (click)="this.getUser()"  [disabled]="!UserForm.valid"    >Sign in to account  </button>
+</form>

@@ -1,0 +1,24 @@
+<form [formGroup]="UserForm!" >
+
+<p class="text-center w-full  font-serif p-4  text-2xl  font-bold max-sm:text-base"  >CREATE A NEW ACCOUNT</p>
+
+
+<label   >Firstname</label>
+    <input formControlName="firstname"  type="text" >
+    <label   >Lastname</label>
+    <input  formControlName="lastname"  type="text" >
+    <label >Password</label>
+    <input formControlName="password"  type="password" type="password" >
+    <label >Email</label>
+    <input formControlName="email"  type="email">
+    <label >Age</label>
+    <input formControlName="age"    type="date" >    
+    <label >Country</label>
+    <input formControlName="country"  type="text" >
+    
+
+
+
+    <button  (click)=" this.getUser();" [disabled]="!UserForm.valid" mat-raised-button >Register</button>
+</form>
+
